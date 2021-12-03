@@ -12,25 +12,25 @@ function options = Channel_capacity_parameter_settings
 %       options
 %           structure variable
 %           Pij  : channel transition probability matrix;
-%           delta: channel capacity relative error threshold ¦Ä;
+%           delta: channel capacity relative error threshold Î´;
 %           slctn: (char variable)selection of choice 'A' or 'B';
 %           cortn
 %               structure variable
 %               Pij    : check the correctness of channel transition
 %                        probability matrix Pij:
-%                        ¢Ù if it's correct  , options.cortn.Pij = 1;
-%                        ¢Ú if it's incorrect, options.cortn.Pij = 0;
+%                        â‘  if it's correct  , options.cortn.Pij = 1;
+%                        â‘¡ if it's incorrect, options.cortn.Pij = 0;
 %               delta  : check the correctness of channel capacity relative
-%                        error threshold ¦Ä:
-%                        ¢Ù if ¦Ä >  0, options.cortn.delta = 1;
-%                        ¢Ú if ¦Ä <= 0, options.cortn.delta = 0;
+%                        error threshold Î´:
+%                        â‘  if Î´ >  0, options.cortn.delta = 1;
+%                        â‘¡ if Î´ <= 0, options.cortn.delta = 0;
 %               nonSngr: judge whether the matrix is nonsingular:
-%                        ¢Ù if it's nonsingular, options.cortn.nonSngr = 1;
-%                        ¢Ú if it's singular or non-square matrix,
+%                        â‘  if it's nonsingular, options.cortn.nonSngr = 1;
+%                        â‘¡ if it's singular or non-square matrix,
 %                           options.cortn.nonSngr = 0.
 
 %% 0.1. License.
-% Copyright (c) 2021 HUANG-He-Star.
+% Copyright Â© 2021 HUANG-He-Star.
 % Channel_capacity_code file/folder is licensed under the MIT license.
 % You can use this software according to the terms and conditions of the
 % MIT license.
@@ -82,12 +82,12 @@ switch options.slctn
             ], ...
             [
             'Please enter the channel capacity relative error threshold'...
-            ' ¦Ä(Please make sure that ¦Ä > 0, just can be used in ITER'...
+            ' Î´(Please make sure that Î´ > 0, just can be used in ITER'...
             'ATIVE Algorithm for SINGULAR and ASYMMETRIC matrices):'
             ]};
         num_lines = [1 70];
         
-        % The entered relative error threshold ¦Ä is 1e-12 by default.
+        % The entered relative error threshold Î´ is 1e-12 by default.
         def = {'10', '10', '1e-12'};
         
         answer = inputdlg(prompt, dlg_title, num_lines, def);
@@ -109,12 +109,12 @@ switch options.slctn
             ], ...
             [
             'Please enter the channel capacity relative error threshold'...
-            ' ¦Ä(Please make sure that ¦Ä > 0, just can be used in ITER'...
+            ' Î´(Please make sure that Î´ > 0, just can be used in ITER'...
             'ATIVE Algorithm for SINGULAR and ASYMMETRIC matrices):'
             ]};
         num_lines = [5 70];
         
-        % The entered relative error threshold ¦Ä is 1e-12 by default.
+        % The entered relative error threshold Î´ is 1e-12 by default.
         def = {[
             '0.175 0.225 0.150 0.150 0.100 0.200; '...
             '0.050 0.300 0.055 0.200 0.150 0.245; '...
@@ -158,10 +158,10 @@ switch options.slctn
         
 end
 
-options.delta = str2double(answer{end, 1}); % read the value of ¦Ä
+options.delta = str2double(answer{end, 1}); % read the value of Î´
 
 %% 3.
-% If the value ¦Ä <= 0, the user will not be reminded of the error, but it
+% If the value Î´ <= 0, the user will not be reminded of the error, but it
 % will be changed to a default value 1e-12.
 if options.delta <= 0
     options.delta = 1e-12;

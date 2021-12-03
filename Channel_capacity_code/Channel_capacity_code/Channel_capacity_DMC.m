@@ -1,5 +1,5 @@
 %% 0.1. License.
-% Copyright (c) 2021 HUANG-He-Star.
+% Copyright Â© 2021 HUANG-He-Star.
 % Channel_capacity_code file/folder is licensed under the MIT license.
 % You can use this software according to the terms and conditions of the
 % MIT license.
@@ -25,11 +25,11 @@
 %               A. Second interface:
 %                       Select random generation to meet the specified
 %                       number of rows and columns of DMC and iteration
-%                       accuracy (¦Ä) Channel transition probability matrix
+%                       accuracy (Î´) Channel transition probability matrix
 %                       Pij;
 %               B. Second interface:
 %                       Custom input a channel transfer probability matrix
-%                       Pij satisfying DMC and iteration accuracy(¦Ä).
+%                       Pij satisfying DMC and iteration accuracy(Î´).
 %
 % The following provides examples of Pij in various cases for the second
 % interface input of item b:

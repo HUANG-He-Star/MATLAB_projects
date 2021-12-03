@@ -13,7 +13,7 @@ function chcp_result = Channel_capacity_itrtn_algrtm(Pij, delta)
 %
 %   Inputs:
 %       Pij  : channel transition probability matrix;
-%       delta: channel capacity relative error threshold ¦Ä.
+%       delta: channel capacity relative error threshold Î´.
 %
 %   Output:
 %       chcp_result
@@ -26,7 +26,7 @@ function chcp_result = Channel_capacity_itrtn_algrtm(Pij, delta)
 %                      process.
 
 %% 0.1. License.
-% Copyright (c) 2021 HUANG-He-Star.
+% Copyright Â© 2021 HUANG-He-Star.
 % Channel_capacity_code file/folder is licensed under the MIT license.
 % You can use this software according to the terms and conditions of the
 % MIT license.
@@ -49,7 +49,7 @@ function chcp_result = Channel_capacity_itrtn_algrtm(Pij, delta)
 %% 1.   Initialization.
 [r, ~] = size(Pij);
 k = 0;                     % Set iteration counter k = 0
-chcp_result.C = -inf;      % Set the initial value of iteration C = - ¡Þ
+chcp_result.C = -inf;      % Set the initial value of iteration C = - âˆž
 
 % The source distribution Pi is initialized to uniform distribution.
 chcp_result.Pi(1:r) = 1/r;
@@ -64,7 +64,7 @@ error(1) = delta+1;
 while error(k+1) > delta
     k = k+1;               % The iteration counter is incremented by one
     
-    %% 2.1. calculate the iteration value of ¦Õ.
+    %% 2.1. calculate the iteration value of Ï†.
     fai = Pij' .* chcp_result.Pi ./ (sum( Pij .* chcp_result.Pi', 1 ))';
     
     %% 2.2.
@@ -84,7 +84,7 @@ while error(k+1) > delta
     
     %% 2.4. Calculate the relative error.
     % Denominator protection, add a positive infinitesimal to the
-    % denominator ¦Å(in MATLAB, realmin is used to generate the minimum
+    % denominator Îµ(in MATLAB, realmin is used to generate the minimum
     % positive number, and the value is 2.2251e-308).
     error(k+1) = abs(chcp_result.C(1,k+1)-chcp_result.C(1,k)) / ...
         (chcp_result.C(1,k+1)+realmin);

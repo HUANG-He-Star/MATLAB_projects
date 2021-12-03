@@ -13,7 +13,7 @@ function chcp_result = Channel_capacity_nonSngr_algrtm(Pij, delta)
 %
 %   Inputs:
 %       Pij  : channel transition probability matrix;
-%       delta: channel capacity relative error threshold ¦Ä.
+%       delta: channel capacity relative error threshold Î´.
 %
 %   Output:
 %       chcp_result
@@ -27,7 +27,7 @@ function chcp_result = Channel_capacity_nonSngr_algrtm(Pij, delta)
 %                      takes values on the boundary, it's a array.
 
 %% 0.1. License.
-% Copyright (c) 2021 HUANG-He-Star.
+% Copyright Â© 2021 HUANG-He-Star.
 % Channel_capacity_code file/folder is licensed under the MIT license.
 % You can use this software according to the terms and conditions of the
 % MIT license.

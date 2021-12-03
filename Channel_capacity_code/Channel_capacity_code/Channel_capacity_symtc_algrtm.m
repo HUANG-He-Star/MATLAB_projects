@@ -24,7 +24,7 @@ function chcp_result = Channel_capacity_symtc_algrtm(Pij)
 %           variation: default to 0.
 
 %% 0.1. License.
-% Copyright (c) 2021 HUANG-He-Star.
+% Copyright © 2021 HUANG-He-Star.
 % Channel_capacity_code file/folder is licensed under the MIT license.
 % You can use this software according to the terms and conditions of the
 % MIT license.

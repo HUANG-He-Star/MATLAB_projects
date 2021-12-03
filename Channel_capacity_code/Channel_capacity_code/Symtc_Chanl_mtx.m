@@ -11,12 +11,12 @@ function symtc = Symtc_Chanl_mtx(Pij)
 %
 %   Output:
 %       symtc: judge whether the matrix Pij is symmetric or para-symmetric:
-%              ¢Ù if Pij is asymmetric    , symtc = 0;
-%              ¢Ú if Pij is symmetric     , symtc = 1;
-%              ¢Û if Pij is para-symmetric, symtc = 2.
+%              â‘  if Pij is asymmetric    , symtc = 0;
+%              â‘¡ if Pij is symmetric     , symtc = 1;
+%              â‘¢ if Pij is para-symmetric, symtc = 2.
 
 %% 0.1. License.
-% Copyright (c) 2021 HUANG-He-Star.
+% Copyright Â© 2021 HUANG-He-Star.
 % Channel_capacity_code file/folder is licensed under the MIT license.
 % You can use this software according to the terms and conditions of the
 % MIT license.
@@ -130,13 +130,13 @@ function symtc_row = symtc_Row(mtx)
 %
 % Notation explanation
 %   Input:
-%       mtx: r¡Ás matrix;
+%       mtx: rÃ—s matrix;
 %            NOTICE: r & s must be positive integers greater than 1 !
 %
 %   Outputs:
 %       symtc_row: judge whether the matrix mtx is row-symmetric;
-%                  ¢Ù if mtx is    row-symmetric, symtc_row = 1;
-%                  ¢Ú if mtx isn't row-symmetric, symtc_row = 0;
+%                  â‘  if mtx is    row-symmetric, symtc_row = 1;
+%                  â‘¡ if mtx isn't row-symmetric, symtc_row = 0;
 
 %% 2.1.
 [r, ~] = size(mtx);

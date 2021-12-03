@@ -15,24 +15,24 @@ function Channel_capacity_output(parameters, symtc)
 %           Pi       : optimal source distribution;
 %           C        : channel capacity sequence generated in iteration
 %                      process, unit: bit/symbol;
-%           k        : ¢Ù iterations in channel capacity iterative
+%           k        : â‘  iterations in channel capacity iterative
 %                         algorithm 'Channel_capacity_itrtn_algrtm.m';
-%                      ¢Ú if Pij is a nonsingular asymmetric matrix and the
+%                      â‘¡ if Pij is a nonsingular asymmetric matrix and the
 %                         optimal source distribution(Pi) takes values on
 %                         the boundary,   'k' is -1;
-%                      ¢Û in other cases, 'k' is  1;
+%                      â‘¢ in other cases, 'k' is  1;
 %           variation: relative error sequence generated in iteration
 %                      process.
 %       symtc: whether the matrix Pij is symmetric or para-symmetric:
-%              ¢Ù if Pij is asymmetric    , symtc = 0;
-%              ¢Ú if Pij is symmetric     , symtc = 1;
-%              ¢Û if Pij is para-symmetric, symtc = 2.
+%              â‘  if Pij is asymmetric    , symtc = 0;
+%              â‘¡ if Pij is symmetric     , symtc = 1;
+%              â‘¢ if Pij is para-symmetric, symtc = 2.
 %
 % Output:
 %   None.
 
 %% 0.1. License.
-% Copyright (c) 2021 HUANG-He-Star.
+% Copyright Â© 2021 HUANG-He-Star.
 % Channel_capacity_code file/folder is licensed under the MIT license.
 % You can use this software according to the terms and conditions of the
 % MIT license.
